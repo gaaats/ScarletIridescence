@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navonavooo"
+    app:startDestination="@id/iniiitFragment">
+
+    <fragment
+        android:id="@+id/iniiitFragment"
+        android:name="com.mobirix.basketballkin.IniiitFragment"
+        android:label="fragment_iniiit"
+        tools:layout="@layout/fragment_iniiit" >
+        <action
+            android:id="@+id/action_iniiitFragment_to_secondGetFromApiFragment"
+            app:destination="@id/secondGetFromApiFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondGetFromApiFragment"
+        android:name="com.mobirix.basketballkin.SecondGetFromApiFragment"
+        android:label="fragment_second_get_from_api"
+        tools:layout="@layout/fragment_second_get_from_api" >
+        <action
+            android:id="@+id/action_secondGetFromApiFragment_to_thirdMakeCheckNumberFragment"
+            app:destination="@id/thirdMakeCheckNumberFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdMakeCheckNumberFragment"
+        android:name="com.mobirix.basketballkin.ThirdMakeCheckNumberFragment"
+        android:label="fragment_third_make_check_number"
+        tools:layout="@layout/fragment_third_make_check_number" >
+        <action
+            android:id="@+id/action_thirdMakeCheckNumberFragment_to_fourMakeGeoCheckFragment"
+            app:destination="@id/fourMakeGeoCheckFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_thirdMakeCheckNumberFragment_to_fakeGameFragment"
+            app:destination="@id/fakeGameFragment"
+            app:launchSingleTop="true" />
+        <argument
+            android:name="isAppsFlyLaunched"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourMakeGeoCheckFragment"
+        android:name="com.mobirix.basketballkin.FourMakeGeoCheckFragment"
+        android:label="fragment_four_make_geo_check"
+        tools:layout="@layout/fragment_four_make_geo_check" >
+        <action
+            android:id="@+id/action_fourMakeGeoCheckFragment_to_fakeGameFragment"
+            app:destination="@id/fakeGameFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fakeGameFragment"
+        android:name="com.mobirix.basketballkin.FakeGameFragment"
+        android:label="fragment_fake_game"
+        tools:layout="@layout/fragment_fake_game" />
+</navigation>
