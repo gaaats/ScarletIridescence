@@ -56,5 +56,39 @@
         android:id="@+id/fakeGameFragment"
         android:name="com.mobirix.basketballkin.FakeGameFragment"
         android:label="fragment_fake_game"
-        tools:layout="@layout/fragment_fake_game" />
+        tools:layout="@layout/fragment_fake_game" >
+        <action
+            android:id="@+id/action_fakeGameFragment_to_itIsGameFragment"
+            app:destination="@id/itIsGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itIsGameFragment"
+        android:name="com.mobirix.basketballkin.ItIsGameFragment"
+        android:label="fragment_it_is_game"
+        tools:layout="@layout/fragment_it_is_game" >
+        <action
+            android:id="@+id/action_itIsGameFragment_to_gameTvooooFragment"
+            app:destination="@id/gameTvooooFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reloadingFragment"
+        android:name="com.mobirix.basketballkin.ReloadingFragment"
+        android:label="fragment_reloading"
+        tools:layout="@layout/fragment_reloading" >
+        <action
+            android:id="@+id/action_reloadingFragment_to_fakeGameFragment"
+            app:destination="@id/fakeGameFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/fakeGameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameTvooooFragment"
+        android:name="com.mobirix.basketballkin.GameTvooooFragment"
+        android:label="fragment_game_tvoooo"
+        tools:layout="@layout/fragment_game_tvoooo" >
+        <action
+            android:id="@+id/action_gameTvooooFragment_to_reloadingFragment"
+            app:destination="@id/reloadingFragment" />
+    </fragment>
 </navigation>
